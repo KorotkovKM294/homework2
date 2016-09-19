@@ -34,8 +34,8 @@ public class PersonTest {
 
         isMarried = husband.marry(wife);
         Assert.assertTrue(isMarried);
-        Assert.assertTrue(husband.getSpouse().equals(wife));
-        Assert.assertTrue(wife.getSpouse().equals(husband));
+        Assert.assertEquals(husband.getSpouse(), wife);
+        Assert.assertEquals(wife.getSpouse(), husband);
         Assert.assertNull(anotherHusband.getSpouse());
         Assert.assertNull(anotherWife.getSpouse());
     }
